@@ -30,13 +30,13 @@ The <html> element is known as the root element of a HTML page. All other elemen
           <a href="../day01-data-manipulation-and-functions/in-class/index.html"
             >Day 1</a
           >
-        </li>
+        </li> 
         <li>
           <a href="../day02-if-statements-boolean-operators/in-class/index.html"
             >Day 2</a
           >
         </li>
-        <li>
+        <li> 
           <a href="../day03-program-state/in-class/index.html">Day 3</a>
         </li>
         <li>
@@ -60,20 +60,27 @@ The <html> element is known as the root element of a HTML page. All other elemen
       </ul>
     </nav>
     <!-- The <h1> element defines a large heading. There are 6 pre-set header elements, <h1> to <h6> -->
-    <h1 id="header">🚀 Basics Project 2: Beat That! 🚀</h1>
+    <!-- <h1 id="header">🚀 Basics Project 2: Beat That! 🚀</h1> -->
     <!-- The <div> tag defines a division or a section in an HTML document, and is commonly use as a "container" for nested HTML elements. -->
-    <div class="container">
-      <!-- The <p> tag defines a paragraph element. -->
-      <p>Input:</p>
-      <!-- The self-closing <input /> tag represents a field for a user to enter input. -->
-      <input id="input-field" />
-      <!-- The self-closing <br /> tag represents a line break - a line's worth of spacing before dispalying the next element. -->
-      <br />
-      <!-- The <button> tag represents.. you guessed it! a button. -->
-      <button id="submit-button">Submit</button>
-      <p>Output:</p>
-      <div class="output-div" id="output-div"></div>
-    </div>
+      ...
+
+      <body>
+          <h1 id="header">Basics: Beat That! 🚀</h1>
+          <div id="container">
+            <p>Hello! Welcome to Beat That! Click submit to start the game.</p>
+            <p>Create a two-digit number by selecting the order of your dice rolls.</p>
+            <p>The player with the highest number wins! Good luck!</p>
+            <p>Input:</p>
+            <input id="input-field" placeholder=" Press submit to start game!" />
+            <br />
+            <button id="submit-button" class = "big-button">Submit 🚀 </button>
+            <p>Output:</p>
+            <div id="output-div"></div>
+          </div>
+      
+        ...
+    
+      
     <!-- Everything below this is incorporating JavaScript programming logic into the webpage. -->
     <!-- The script tag encloses JavaScript syntax for the browser to interpret programtically -->
     <!-- The following line imports all code written in the script.js file -->
