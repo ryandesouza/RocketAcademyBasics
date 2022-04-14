@@ -219,10 +219,10 @@ var main = function (input) {
   }
   gameState = ROLL_DICE;
     output = `Press submit to continue playing! <br> `; 
-    return output; 
+    return output;  
   }
 
-// CHECK SCORE 
+// CHECK SCORE  
   if (gameState == SCORE){
     console.log(`Player 1 combined arrary is ${playerOneCombine}`)
     var index = 0; 
@@ -291,7 +291,7 @@ var main = function (input) {
   
 // Auto-Generate Combined Number
 if (gameState == AUTO_COMBINE_NUMBER){
-  
+
 }
 
 
