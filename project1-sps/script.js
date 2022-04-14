@@ -3,12 +3,9 @@ var draw = 0;
 var lose = 0; 
 var numberOfGames =0; 
 
-var mode = 'default';
 
 var main = function (input) {
   var computerGuess = rollDice(); 
-
-  if (input == 'default'){
 
   if (computerGuess !=0){
     numberOfGames +=1;
@@ -23,15 +20,15 @@ var main = function (input) {
 
     if (input == output){
       draw +=1; 
-      result = `Hello ${name}` <br> `The computer chose ${output}. You chose ${input}. The result is: Draw. The draw percentage is ${drawPercent} %`;
+      result = `The computer chose ${output}. You chose ${input}. The result is: Draw. The draw percentage is ${drawPercent} %`;
     }
     else if (input == 'paper'){
       lose +=1;
-      result = `Hello ${name}` <br> ` The computer chose ${output}. You chose ${input}. The result is: Lose. The lose percentage is ${LosePercent} %`;
+      result = ` The computer chose ${output}. You chose ${input}. The result is: Lose. The lose percentage is ${LosePercent} %`;
     }
     else{
       win +=1;
-      result = `Hello ${name}` <br> ` The computer chose ${output}. You chose ${input}. The result is: Win. The win percentage is ${winPercent} %`;
+      result = ` The computer chose ${output}. You chose ${input}. The result is: Win. The win percentage is ${winPercent} %`;
     }
   }
   else if (computerGuess == 2){
@@ -72,7 +69,7 @@ var main = function (input) {
   console.log(`The number of losses is ${lose}`);
    
   return result;
-}
+
 
 };
 
