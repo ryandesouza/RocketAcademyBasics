@@ -113,6 +113,68 @@ var playerFinalScore = [];
 var dealerFinalScore = []; 
 
 // Helper function
+
+var convertSuitWordToEmoji = function (suitWord) {
+  if (suitWord == 'spades') {
+    return '♠️';
+  }
+  if (suitWord == 'hearts') {
+    return '♥️';
+  }
+  if (suitWord == 'clubs') {
+    return '♣️';
+  }
+  if (suitWord == 'diamonds') {
+    return '♦️';
+  }
+  // If we reach here, we entered an invalid suit
+  return 'Invalid Suit!';
+};
+
+var convertNumberToEmoji = function (number) {
+  if (number == '1') {
+    return '1️⃣';
+  }
+  if (number == '2') {
+    return '2️⃣';
+  }
+  if (number == '3') {
+    return '3️⃣';
+  }
+  if (number == '4') {
+    return '4️⃣';
+  }
+  if (number == '5') {
+    return '5️⃣';
+  }
+  if (number == '6') {
+    return '6️⃣';
+  }
+  if (number == '7') {
+    return '7️⃣';
+  }
+  if (number == '8') {
+    return '8️⃣';
+  }
+  if (number == '9') {
+    return '9️⃣';
+  }
+  if (number == '10') {
+    return '🔟';
+  }
+  // if (number == 'jack') {
+  //   return '🃏';
+  // }
+  // if (number == 'queen') {
+  //   return '🂽';
+  // }
+  // if (number == 'king') {
+  //   return '🂮';
+  // }
+  // If we reach here, we entered an invalid suit
+  return 'Invalid Number!';
+};
+
 var startGame = function(){
 
   for (index = 0; index < computerCardRank.length; index +=1){
@@ -139,8 +201,8 @@ var startGame = function(){
   console.log(`Player cards = ${playerCardRank[0]}, ${playerCardRank[1]}`);
   console.log(`Computer cards = ${computerCardRank[0]}, ${computerCardRank[1]}`);
   gameState = CHECK_BLACKJACK; 
-  return `Dealer card = ${computerCardName[0]} of ${computerCardSuit[0]} and ${computerCardName[1]} of  ${computerCardSuit[1]} <br> 
-  Player card = ${playerCardName[0]} of ${playerCardSuit[0]} and ${playerCardName[1]} of  ${playerCardSuit[1]} <br> 
+  return `Dealer card = ${convertNumberToEmoji(computerCardName[0])} of ${convertSuitWordToEmoji(computerCardSuit[0])} and ${convertNumberToEmoji(computerCardName[1])} of  ${convertSuitWordToEmoji(computerCardSuit[1])} <br> 
+  Player card = ${convertNumberToEmoji(playerCardName[0])} of ${convertSuitWordToEmoji(playerCardSuit[0])} and ${convertNumberToEmoji(playerCardName[1])} of  ${convertSuitWordToEmoji(playerCardSuit[1])} <br> 
   `; 
 }
 
